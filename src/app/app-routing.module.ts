@@ -23,7 +23,7 @@ const routes: Routes = [
     component: MainComponent,
   },
   {
-    path: 'experiment',
+    path: 'experiment/lab',
     component: LabComponent,
   },
 ];

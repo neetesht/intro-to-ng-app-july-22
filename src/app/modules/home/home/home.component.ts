@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HomeCardData } from './models';
 
 @Component({
@@ -20,5 +21,24 @@ export class HomeComponent {
       title: 'Experiment',
     },
   ];
-  constructor() {}
+  constructor(private router: Router) {}
+
+  navigate(route: string): void {
+    switch (route) {
+      case 'Pokemon':
+        this.router.navigate(['pokemon']);
+        break;
+
+      case 'Tour of Heroes':
+        this.router.navigate(['tour-of-heros']);
+        break;
+
+      case 'Experiment':
+        this.router.navigate(['experiment', 'lab']);
+        break;
+
+      default:
+        break;
+    }
+  }
 }
