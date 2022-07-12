@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HomeCardData } from './models';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  homeCardsData: any = [
+  homeCardsData: HomeCardData[] = [
     {
       title: 'Pokemon',
       icon: 'catching_pokemon',
