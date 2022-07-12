@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { lorem30 } from '../utils/text';
 
 @Component({
   selector: 'app-home-card',
@@ -9,9 +10,7 @@ export class HomeCardComponent implements OnInit {
   @Input() title: string = 'Feature';
   @Input() icon: string = 'science';
   @Input()
-  description: string = `Lorem ipsum dolor sit amet consectetur ${this.icon} adipisicing elit. Libero at sit
-  placeat iure error? Optio ullam id et quos iure, sequi, magnam beatae
-  ea, officia quasi delectus repellat molestias. Reprehenderit.`;
+  description: string = lorem30;
 
   constructor() {}
 
