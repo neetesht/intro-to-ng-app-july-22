@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LabComponent } from './lab/lab.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LabComponent
+  ],
   imports: [
     CommonModule
   ]
