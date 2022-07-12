@@ -7,24 +7,39 @@ import { MainComponent } from './modules/tour-of-heros/main/main.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'pokemon',
-    component: PokemonComponent,
-  },
-  {
-    path: 'tour-of-heros',
-    component: MainComponent,
-  },
-  {
-    path: 'experiment/lab',
-    component: LabComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('./modules/home/home.module').then((m) => m.HomeModule),
+      },
+      {
+        path: 'pokemon',
+        loadChildren: () =>
+          import('./modules/pokemon/pokemon.module').then(
+            (m) => m.PokemonModule
+          ),
+      },
+      {
+        path: 'tour-of-heros',
+        loadChildren: () =>
+          import('./modules/tour-of-heros/tour-of-heros.module').then(
+            (m) => m.TourOfHerosModule
+          ),
+      },
+      {
+        path: 'experiment/lab',
+        loadChildren: () =>
+          import('./modules/experiment/experiment.module').then(
+            (m) => m.ExperimentModule
+          ),
+      },
+    ],
   },
 ];
 @NgModule({
