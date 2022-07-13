@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonDetail } from '../models/pokemon-detail.interface';
+import { PokemonList } from '../models/pokemon-list.interface';
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
@@ -72,24 +74,7 @@ export class PokemonComponent implements OnInit {
     weight: 0,
   };
   constructor() {}
+
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, no-empty-function
   ngOnInit(): void {}
-}
-interface PokemonDetail {
-  id: string;
-  name: string;
-  image: string;
-  type: string;
-  height: number;
-  weight: number;
-}
-interface PokemonList {
-  count: number;
-  next: string;
-  previous: string;
-  results: PokemonListItem[];
-}
-interface PokemonListItem {
-  name: string;
-  url: string;
 }
