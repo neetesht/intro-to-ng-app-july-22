@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { PokemonTeamComponent } from './pokemon-team/pokemon-team.component';
+import { PokemonTeamMemberComponent } from './pokemon-team-member/pokemon-team-member.component';
 
 export const pokemonRoutes: Routes = [
   {
@@ -14,7 +15,7 @@ export const pokemonRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [PokemonComponent, PokemonListComponent, PokemonDetailComponent, PokemonTeamComponent],
+  declarations: [PokemonComponent, PokemonListComponent, PokemonDetailComponent, PokemonTeamComponent, PokemonTeamMemberComponent],
   imports: [CommonModule, RouterModule.forChild(pokemonRoutes)],
 })
 export class PokemonModule {}
